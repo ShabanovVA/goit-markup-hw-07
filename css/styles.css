@@ -57,6 +57,11 @@ img {
   height: auto;
 }
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -120,12 +125,12 @@ header {
 
 .logo:hover,
 .logo:focus,
-.section-footer__link:hover,
-.section-footer__link:focus,
+.footer__link:hover,
+.footer__link:focus,
 .logo:hover .logo__forepart,
 .logo:focus .logo__forepart,
-.section-footer__link:hover .logo__forepart,
-.section-footer__link:focus .logo__forepart {
+.footer__link:hover .logo__forepart,
+.footer__link:focus .logo__forepart {
   color: var(--accent-logo-color);
 }
 
@@ -223,7 +228,7 @@ header {
 }
 
 /* Hero */
-.section-hero {
+.hero {
   max-width: 1600px;
   height: 600px;
   margin-left: auto;
@@ -239,11 +244,11 @@ header {
   padding-bottom: 200px;
 }
 
-.section-hero__container {
+.hero__container {
   width: 696px;
 }
 
-.section-hero__title {
+.hero__title {
   color: var(--main-white-color);
 
   font-weight: 900;
@@ -273,7 +278,7 @@ header {
   display: inline-block;
 }
 
-.section-hero__button {
+.hero__button {
   padding: 10px 32px;
 
   font-weight: 700;
@@ -289,20 +294,13 @@ header {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.section-hero__button:hover,
-.section-hero__button:focus {
+.hero__button:hover,
+.hero__button:focus {
   color: var(--main-white-color);
   background-color: var(--btn-hero-color);
 }
 
 /* Advantages */
-
-.section-advantages,
-.section-clients,
-.section-cooperators {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
 
 .section-title {
   color: var(--title-text-color);
@@ -314,12 +312,12 @@ header {
   letter-spacing: 0.03em;
 }
 
-.section-advantages__list {
+.advantages__list {
   display: flex;
   gap: 30px;
 }
 
-.section-advantages__icon {
+.advantages__icon {
   display: flex;
   background-color: var(--btn-grey-color);
   height: 120px;
@@ -328,11 +326,11 @@ header {
   justify-content: center;
 }
 
-.section-advantages__img {
+.advantages__img {
   align-self: center;
 }
 
-.section-advantages__title {
+.advantages__title {
   color: var(--title-text-color);
 
   font-weight: 700;
@@ -345,7 +343,7 @@ header {
   margin-top: 30px;
 }
 
-.section-advantages__description {
+.advantages__description {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -354,25 +352,25 @@ header {
 
 /* Чем занимаются */
 
-.section-specialism {
-  padding-bottom: 94px;
+.specialism {
+  padding-top: 0;
 }
 
-.section-specialism__section-title,
-.section-cooperators__section-title {
+.specialism__title,
+.cooperators__title {
   margin-bottom: 50px;
 }
 
-.section-specialism__list {
+.specialism__list {
   display: flex;
   gap: 30px;
 }
 
-.section-specialism__item {
+.specialism__item {
   position: relative;
 }
 
-.section-specialism__text {
+.specialism__text {
   display: flex;
   position: absolute;
 
@@ -395,28 +393,28 @@ header {
 
 /* Team */
 
-.section-cooperators {
+.cooperators {
   background-color: var(--btn-grey-color);
 }
 
-.section-cooperators__list {
+.cooperators__list {
   display: flex;
   gap: 30px;
 }
 
-.section-cooperators__item {
+.cooperators__item {
   background-color: var(--main-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
-.section-cooperators__card {
+.cooperators__card {
   padding: 30px 32px;
   text-align: center;
 }
 
-.section-cooperators__name {
+.cooperators__name {
   color: var(--title-text-color);
 
   font-weight: 500;
@@ -426,7 +424,7 @@ header {
   margin-bottom: 10px;
 }
 
-.section-cooperators__post {
+.cooperators__post {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.9;
@@ -434,13 +432,13 @@ header {
   margin-bottom: 16px;
 }
 
-.section-cooperators__networks {
+.cooperators__networks {
   display: flex;
   gap: 10px;
   /* justify-content: space-between; */
 }
 
-.section-cooperators__link {
+.cooperators__link {
   display: flex;
 
   width: 44px;
@@ -456,21 +454,21 @@ header {
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.section-cooperators__link:hover,
-.section-cooperators__link:focus {
+.cooperators__link:hover,
+.cooperators__link:focus {
   background-color: var(--accent-color);
   fill: var(--main-white-color);
 }
 
 /* Клиенты */
 
-.section-clients__list {
+.clients__list {
   display: flex;
   margin-top: 50px;
   gap: 30px;
 }
 
-.section-clients__link {
+.clients__link {
   display: flex;
   width: 170px;
   height: 92px;
@@ -485,26 +483,26 @@ header {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.section-clients__link:hover,
-.section-clients__link:focus {
+.clients__link:hover,
+.clients__link:focus {
   fill: var(--accent-color);
   border: 1px solid var(--accent-color);
 }
 
 /* Footer */
 
-.section-footer {
+.footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--bgc-header-color);
 }
 
-.section-footer__container {
+.footer__container {
   display: flex;
   align-items: baseline;
 }
 
-.section-footer__link {
+.footer__link {
   display: block;
   color: var(--main-white-color);
 
@@ -516,7 +514,7 @@ header {
   margin-bottom: 20px;
 }
 
-.section-footer__address-list {
+.footer__address-list {
   display: block;
   width: 231px;
 
@@ -530,21 +528,21 @@ header {
   color: var(--main-white-color);
 }
 
-.section-footer__address-item:not(:last-child) {
+.footer__address-item:not(:last-child) {
   margin-bottom: 9px;
 }
 
-.section-footer__address-item--grey,
-.section-footer__address-item--grey {
+.footer__address-item--grey,
+.footer__address-item--grey {
   color: var(--address-footer-color);
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.section-footer__address-item--grey:hover,
-.section-footer__address-item--grey:focus,
-.section-footer__address-item--grey:hover,
-.section-footer__address-item--grey:focus {
+.footer__address-item--grey:hover,
+.footer__address-item--grey:focus,
+.footer__address-item--grey:hover,
+.footer__address-item--grey:focus {
   color: var(--accent-color);
 }
 
@@ -676,20 +674,15 @@ header {
 
 /* Стили Портфолио */
 
-.section-portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 /* Меню работ */
-.section-portfolio__menu {
+.portfolio__menu {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
   gap: 8px;
 }
 
-.section-portfolio__menu-button {
+.portfolio__menu-button {
   padding: 6px 22px;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -699,13 +692,13 @@ header {
   background-color: var(--btn-grey-color);
 }
 
-.section-portfolio__menu-button--current {
+.portfolio__menu-button--current {
   color: var(--main-white-color);
   background-color: var(--accent-color);
 }
 
-.section-portfolio__menu-button:hover,
-.section-portfolio__menu-button:focus {
+.portfolio__menu-button:hover,
+.portfolio__menu-button:focus {
   color: var(--main-white-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -714,29 +707,29 @@ header {
 
 /* Примеры работ */
 
-.section-portfolio__works-list {
+.portfolio__works-list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
 
-.section-portfolio__works-item {
+.portfolio__works-item {
   flex-basis: calc((100% - 2 * 30px) / 3);
 }
 
-.section-portfolio__link-card {
+.portfolio__link-card {
   display: block;
   text-decoration: none;
 
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.section-portfolio__card-overlate {
+.portfolio__card-overlate {
   position: relative;
   overflow: hidden;
 }
 
-.section-portfolio__card-text {
+.portfolio__card-text {
   position: absolute;
   display: block;
 
@@ -759,18 +752,18 @@ header {
   background-color: rgba(33, 150, 243, 0.9);
 }
 
-.section-portfolio__link-card:hover,
-.section-portfolio__link-card:focus {
+.portfolio__link-card:hover,
+.portfolio__link-card:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.section-portfolio__link-card:hover .section-portfolio__card-text,
-.section-portfolio__link-card:focus .section-portfolio__card-text {
+.portfolio__link-card:hover .portfolio__card-text,
+.portfolio__link-card:focus .portfolio__card-text {
   transform: translateY(0);
 }
 
-.section-portfolio__card-description {
+.portfolio__card-description {
   display: block;
   padding: 20px 24px;
 
@@ -779,7 +772,7 @@ header {
   border-color: var(--border-works-color);
 }
 
-.section-portfolio__card-title {
+.portfolio__card-title {
   margin-bottom: 4px;
 
   font-weight: 700;
@@ -790,7 +783,7 @@ header {
   color: var(--title-text-color);
 }
 
-.section-portfolio__card-name {
+.portfolio__card-name {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
