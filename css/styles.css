@@ -546,12 +546,12 @@ header {
   color: var(--accent-color);
 }
 
-.company-networks {
+.footer__networks {
   margin-left: 70px;
   height: 80px;
 }
 
-.company-networks__title,
+.footer__networks-title,
 .subscribe__label {
   margin-bottom: 20px;
 
@@ -564,12 +564,12 @@ header {
   color: var(--main-white-color);
 }
 
-.company-networks__footer-network {
+.footer__networks-list {
   display: flex;
   gap: 10px;
 }
 
-.company-networks__login {
+.footer__networks-login {
   display: flex;
   width: 44px;
   height: 44px;
@@ -584,18 +584,18 @@ header {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.company-networks__login:hover,
-.company-networks__login:focus {
+.footer__networks-login:hover,
+.footer__networks-login:focus {
   background-color: var(--accent-color);
 }
 
 /* Футер подпишись */
 
-.subscribe {
+.footer__subscribe {
   margin-left: auto;
 }
 
-.subscribe__form {
+.footer__subscribe-form {
   display: flex;
   width: 570px;
   height: 50px;
@@ -603,7 +603,7 @@ header {
   align-items: flex-end;
 }
 
-.footer-label {
+.footer__subscribe-label {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -614,7 +614,7 @@ header {
   color: var(--main-white-color);
 }
 
-.subscribe__input {
+.footer__subscribe-input {
   display: block;
   width: 358px;
   padding: 14px 16px 14px 16px;
@@ -636,11 +636,11 @@ header {
   background-color: transparent;
 }
 
-.subscribe__input:focus {
+.footer__subscribe-input:focus {
   border-color: var(--accent-color);
 }
 
-.subscribe__button {
+.footer__subscribe-button {
   display: flex;
   margin-left: 12px;
   padding: 9px 28px 9px 29px;
@@ -660,13 +660,13 @@ header {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.subscribe__button:hover,
-.subscribe__button:focus {
+.footer__subscribe-button:hover,
+.footer__subscribe-button:focus {
   background-color: var(--btn-hero-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.subscribe__button-icon {
+.footer__subscribe-icon {
   width: 24px;
   height: 24px;
   margin-left: 10px;
