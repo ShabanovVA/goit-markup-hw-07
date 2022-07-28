@@ -17,17 +17,56 @@
   --main-white-color: #ffffff;
   --btn-grey-color: #f5f4fa;
   --logo-black-color: #000000;
-  --bgc-header-color: #2f303a;
+  --bgc-hero-footer-color: #2f303a;
   --address-footer-color: rgba(255, 255, 255, 0.6);
   --border-header-color: #ececec;
   --border-works-color: #eeeeee;
   --btn-hero-color: #188ce8;
   --accent-logo-color: aqua;
   --icon-color: #afb1b8;
+  /* begin */
+  --primary-transition-time: 250ms;
+  --primary-cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+  --hero-background-gradient: linear-gradient(
+    to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+  );
+  --primary-text-color: #757575;
+  --border-header-color: #ececec;
+  --logo-black-color: #000000;
+  --accent-color: #2196f3;
+  --accent-logo-color: aqua;
+  --title-text-color: #212121;
+  --bgc-hero-footer-color: #2f303a;
+  --main-white-color: #ffffff;
+  --btn-hero-color: #188ce8;
+  --advantages-icon-color: rgba(245, 244, 250, 1);
+  --specialism-text-bgc: rgba(47, 48, 58, 0.8);
+  --cooperators-bgc: #f5f4fa;
+  --cooperators-card-bgc: #ffffff;
+  --cooperators-card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  --cooperators-icon-bgc: #ffffff;
+  --cooperators-icon-fill: #afb1b8;
+  --cooperators-icon-bgc-hover: #2196f3;
+  --cooperators-icon-fill-hover: #ffffff;
+  --clients-border-color: #afb1b8;
+  --clients-fill-color: #afb1b8;
+  --address-footer-color: rgba(255, 255, 255, 0.6);
+  --footer-networks-bgc: rgba(255, 255, 255, 0.1);
+  --footer-input-border-color: rgba(255, 255, 255, 0.3);
+  --footer-input-border-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  --footer-input-color: rgba(255, 255, 255, 0.6);
+  --footer-button-hover-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  --btn-grey-color: #f5f4fa;
+  --portfolio-button-current-color: #ffffff;
+  --portfolio-button-hover-color: #ffffff;
+  --portfolio-button-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 body {
-  background-color: var(--primary-bg-color);
   color: var(--primary-text-color);
 
   font-family: Roboto, sans-serif;
@@ -233,7 +272,7 @@ header {
   height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-color: var(--bgc-header-color);
+  background-color: var(--bgc-hero-footer-color);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/employees.jpg');
   background-size: cover;
@@ -319,7 +358,7 @@ header {
 
 .advantages__icon {
   display: flex;
-  background-color: var(--btn-grey-color);
+  background-color: var(--advantages-icon-color);
   height: 120px;
   border-radius: 4px;
   align-items: center;
@@ -388,13 +427,13 @@ header {
   bottom: 0px;
 
   color: var(--main-white-color);
-  background-color: rgba(47, 48, 58, 0.8);
+  background-color: var(--specialism-text-bgc);
 }
 
 /* Team */
 
 .cooperators {
-  background-color: var(--btn-grey-color);
+  background-color: var(--cooperators-bgc);
 }
 
 .cooperators__list {
@@ -404,8 +443,7 @@ header {
 
 .cooperators__item {
   background-color: var(--main-white-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--cooperators-card-shadow);
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -435,7 +473,6 @@ header {
 .cooperators__networks {
   display: flex;
   gap: 10px;
-  /* justify-content: space-between; */
 }
 
 .cooperators__link {
@@ -447,8 +484,8 @@ header {
   align-items: center;
   justify-content: center;
 
-  background-color: var(--main-white-color);
-  fill: var(--icon-color);
+  background-color: var(--cooperators-icon-bgc);
+  fill: var(--cooperators-icon-fill);
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -456,8 +493,8 @@ header {
 
 .cooperators__link:hover,
 .cooperators__link:focus {
-  background-color: var(--accent-color);
-  fill: var(--main-white-color);
+  background-color: var(--cooperators-icon-bgc-hover);
+  fill: var(--cooperators-icon-fill-hover);
 }
 
 /* Клиенты */
@@ -473,9 +510,9 @@ header {
   width: 170px;
   height: 92px;
 
-  border: 1px solid var(--icon-color);
+  border: 1px solid var(--clients-border-color);
   border-radius: 4px;
-  fill: var(--icon-color);
+  fill: var(--clients-fill-color);
 
   align-items: center;
   justify-content: center;
@@ -494,7 +531,7 @@ header {
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
-  background-color: var(--bgc-header-color);
+  background-color: var(--bgc-hero-footer-color);
 }
 
 .footer__container {
@@ -578,7 +615,7 @@ header {
   align-items: center;
   justify-content: center;
 
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--footer-networks-bgc);
   fill: var(--main-white-color);
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -626,13 +663,13 @@ header {
   letter-spacing: 0.03em;
   outline: none;
 
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-color: var(--footer-input-border-color);
+  filter: var(--footer-input-border-shadow);
   border-radius: 4px;
 
   transition: button-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--footer-input-color);
   background-color: transparent;
 }
 
@@ -663,7 +700,7 @@ header {
 .footer__subscribe-button:hover,
 .footer__subscribe-button:focus {
   background-color: var(--btn-hero-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--footer-button-hover-shadow);
 }
 
 .footer__subscribe-icon {
@@ -693,16 +730,15 @@ header {
 }
 
 .portfolio__menu-button--current {
-  color: var(--main-white-color);
+  color: var(--portfolio-button-current-color);
   background-color: var(--accent-color);
 }
 
 .portfolio__menu-button:hover,
 .portfolio__menu-button:focus {
-  color: var(--main-white-color);
+  color: var(--portfolio-button-hover-color);
   background-color: var(--accent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--portfolio-button-shadow);
 }
 
 /* Примеры работ */
