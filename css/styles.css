@@ -1,30 +1,4 @@
-/* цвет основного текста #757575 */
-/* цвет вторичного текста #212121 */
-/* белый #FFFFFF */
-/* цвет акцента #2196F3 */
-/* белый прозрачный в футере rgba(255, 255, 255, 0.6) */
-/* черный в logo #000000 */
-/* вторичный цвет фона #F5F4FA */
-/* основной цвет фона #FFFFFF */
-/* цвет фона героя и футера #2F303A */
-/* цвет нижней рамки хедера #ECECEC */
-/* цвет нижней рамки работ #EEEEEE */
-/* цвет рамки соцсетей AFB1B8 */
 :root {
-  --primary-text-color: #757575;
-  --title-text-color: #212121;
-  --accent-color: #2196f3;
-  --main-white-color: #ffffff;
-  --btn-grey-color: #f5f4fa;
-  --logo-black-color: #000000;
-  --bgc-hero-footer-color: #2f303a;
-  --address-footer-color: rgba(255, 255, 255, 0.6);
-  --border-header-color: #ececec;
-  --border-works-color: #eeeeee;
-  --btn-hero-color: #188ce8;
-  --accent-logo-color: aqua;
-  --icon-color: #afb1b8;
-  /* begin */
   --primary-transition-time: 250ms;
   --primary-cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
   --hero-background-gradient: linear-gradient(
@@ -64,6 +38,16 @@
   --portfolio-button-hover-color: #ffffff;
   --portfolio-button-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  --portfolio-card-bgc: rgba(33, 150, 243, 0.9);
+  --portfolio-card-hover-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  --backdrop-bgc: rgba(0, 0, 0, 0.2);
+  --modal-shadow-color: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  --modal-border-color: rgba(33, 33, 33, 0.2);
+  --modal-textarea-color: rgba(117, 117, 117, 0.5);
+  --modal-btn-border-color: rgba(0, 0, 0, 0.1);
+  --border-works-color: #eeeeee;
 }
 
 body {
@@ -154,12 +138,12 @@ header {
   text-decoration: none;
   letter-spacing: 0.03em;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--primary-transition-time) var(--primary-cubic-bezier);
 }
 
 .logo__forepart {
   color: var(--accent-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--primary-transition-time) var(--primary-cubic-bezier);
 }
 
 .logo:hover,
@@ -195,7 +179,7 @@ header {
   letter-spacing: 0.02em;
   text-decoration: none;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--primary-transition-time) var(--primary-cubic-bezier);
 }
 
 .header__menu-link:hover,
@@ -244,7 +228,7 @@ header {
   text-decoration: none;
   align-items: center;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--primary-transition-time) var(--primary-cubic-bezier);
 }
 
 .header__contacts-link:hover,
@@ -258,7 +242,7 @@ header {
   margin-right: 10px;
   fill: currentColor;
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--primary-transition-time) var(--primary-cubic-bezier);
 }
 
 .header__contacts-icon:hover,
@@ -273,8 +257,7 @@ header {
   margin-left: auto;
   margin-right: auto;
   background-color: var(--bgc-hero-footer-color);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('../images/employees.jpg');
+  background-image: var(--hero-background-gradient), url('../images/employees.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -330,7 +313,8 @@ header {
   color: var(--main-white-color);
   background-color: var(--accent-color);
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--primary-transition-time) var(--primary-cubic-bezier),
+    color var(--primary-transition-time) var(--primary-cubic-bezier);
 }
 
 .hero__button:hover,
@@ -487,8 +471,8 @@ header {
   background-color: var(--cooperators-icon-bgc);
   fill: var(--cooperators-icon-fill);
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--primary-transition-time) var(--primary-cubic-bezier),
+    background-color var(--primary-transition-time) var(--primary-cubic-bezier);
 }
 
 .cooperators__link:hover,
@@ -517,7 +501,8 @@ header {
   align-items: center;
   justify-content: center;
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--primary-transition-time) var(--primary-cubic-bezier),
+    border var(--primary-transition-time) var(--primary-cubic-bezier);
 }
 
 .clients__link:hover,
@@ -573,7 +558,7 @@ header {
 .footer__address-item--grey {
   color: var(--address-footer-color);
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--primary-transition-time) var(--primary-cubic-bezier);
 }
 
 .footer__address-item--grey:hover,
@@ -618,7 +603,7 @@ header {
   background-color: var(--footer-networks-bgc);
   fill: var(--main-white-color);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--primary-transition-time) var(--primary-cubic-bezier);
 }
 
 .footer__networks-login:hover,
@@ -667,7 +652,7 @@ header {
   filter: var(--footer-input-border-shadow);
   border-radius: 4px;
 
-  transition: button-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: button-color var(--primary-transition-time) var(--primary-cubic-bezier);
 
   color: var(--footer-input-color);
   background-color: transparent;
@@ -694,8 +679,8 @@ header {
   color: var(--main-white-color);
   background-color: var(--accent-color);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--primary-transition-time) var(--primary-cubic-bezier),
+    box-shadow var(--primary-transition-time) var(--primary-cubic-bezier);
 }
 .footer__subscribe-button:hover,
 .footer__subscribe-button:focus {
@@ -722,9 +707,9 @@ header {
 .portfolio__menu-button {
   padding: 6px 22px;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--primary-transition-time) var(--primary-cubic-bezier),
+    background-color var(--primary-transition-time) var(--primary-cubic-bezier),
+    box-shadow var(--primary-transition-time) var(--primary-cubic-bezier);
   color: var(--title-text-color);
   background-color: var(--btn-grey-color);
 }
@@ -757,7 +742,7 @@ header {
   display: block;
   text-decoration: none;
 
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow var(--primary-transition-time) var(--primary-cubic-bezier);
 }
 
 .portfolio__card-overlate {
@@ -782,16 +767,15 @@ header {
   letter-spacing: 0.03em;
 
   transform: translateY(101%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--primary-transition-time) var(--primary-cubic-bezier);
 
   color: var(--main-white-color);
-  background-color: rgba(33, 150, 243, 0.9);
+  background-color: var(--portfolio-card-bgc);
 }
 
 .portfolio__link-card:hover,
 .portfolio__link-card:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: var(--portfolio-card-hover-shadow);
 }
 
 .portfolio__link-card:hover .portfolio__card-text,
@@ -838,9 +822,9 @@ header {
   width: 100%;
   height: 100%;
 
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--backdrop-bgc);
 
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity var(--primary-transition-time) var(--primary-cubic-bezier);
 }
 
 .backdrop.is-hidden {
@@ -861,12 +845,11 @@ header {
   padding: 40px;
 
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--primary-transition-time) var(--primary-cubic-bezier);
 
   border-radius: 4px;
 
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--modal-shadow-color);
   background-color: var(--main-white-color);
 }
 
@@ -882,14 +865,14 @@ header {
   cursor: pointer;
 
   background-color: var(--main-white-color);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--modal-btn-border-color);
 }
 
 .modal__icon-close {
   width: 18px;
   height: 18px;
   fill: var(--logo-black-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--primary-transition-time) var(--primary-cubic-bezier);
 }
 
 .modal__btn-modal:hover .modal__icon-close,
@@ -937,7 +920,7 @@ header {
   height: 18px;
 
   transform: translateY(100%);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--primary-transition-time) var(--primary-cubic-bezier);
 }
 
 .modal__input {
@@ -946,10 +929,10 @@ header {
   margin-top: 4px;
   outline: none;
 
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  border: 1px solid var(--modal-border-color);
   border-radius: 4px;
 
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color var(--primary-transition-time) var(--primary-cubic-bezier);
 }
 
 .modal__textarea {
@@ -964,10 +947,10 @@ header {
   line-height: 1.14;
   letter-spacing: 0.01em;
 
-  color: rgba(117, 117, 117, 0.5);
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  color: var(--modal-textarea-color);
+  border: 1px solid var(--modal-border-color);
   border-radius: 4px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color var(--primary-transition-time) var(--primary-cubic-bezier);
 }
 
 .modal__user-contacts:focus-within > .modal__input,
@@ -1023,7 +1006,7 @@ header {
   border-radius: 2px;
   vertical-align: text-top;
 
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color var(--primary-transition-time) var(--primary-cubic-bezier);
 }
 
 .modal__checkbox:checked + .modal__icon-checkbox {
@@ -1054,8 +1037,8 @@ header {
   border: 1px solid transparent;
   border-radius: 4px;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--primary-transition-time) var(--primary-cubic-bezier),
+    box-shadow var(--primary-transition-time) var(--primary-cubic-bezier);
 }
 
 .modal__button-submit:hover,
