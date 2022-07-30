@@ -1,0 +1,54 @@
+.hero {
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--bgc-hero-footer-color);
+    background-image: var(--hero-background-gradient), url('../images/employees.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    
+    &__container {
+            width: 696px;
+        }
+    
+        &__title {
+            color: var(--main-white-color);
+    
+            font-weight: 900;
+            font-size: 44px;
+            line-height: 1.36;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+    
+            margin-bottom: 30px;
+        }
+}
+
+.hero__button {
+    padding: 10px 32px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+
+    align-items: center;
+
+    color: var(--main-white-color);
+    background-color: var(--accent-color);
+
+    transition: color var(--primary-transition-time) var(--primary-cubic-bezier),
+        color var(--primary-transition-time) var(--primary-cubic-bezier);
+
+    &:hover,
+    &:focus {
+    color: var(--main-white-color);
+    background-color: var(--btn-hero-color);
+    }
+}
+

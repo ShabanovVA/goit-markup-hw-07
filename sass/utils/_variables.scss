@@ -1,0 +1,49 @@
+:root {
+    --primary-transition-time: 250ms;
+    --primary-cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+    --hero-background-gradient: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4));
+    --primary-text-color: #757575;
+    --border-header-color: #ececec;
+    --logo-black-color: #000000;
+    --accent-color: #2196f3;
+    --accent-logo-color: aqua;
+    --title-text-color: #212121;
+    --bgc-hero-footer-color: #2f303a;
+    --main-white-color: #ffffff;
+    --btn-hero-color: #188ce8;
+    --advantages-icon-color: rgba(245, 244, 250, 1);
+    --specialism-text-bgc: rgba(47, 48, 58, 0.8);
+    --cooperators-bgc: #f5f4fa;
+    --cooperators-card-bgc: #ffffff;
+    --cooperators-card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    --cooperators-icon-bgc: #ffffff;
+    --cooperators-icon-fill: #afb1b8;
+    --cooperators-icon-bgc-hover: #2196f3;
+    --cooperators-icon-fill-hover: #ffffff;
+    --clients-border-color: #afb1b8;
+    --clients-fill-color: #afb1b8;
+    --address-footer-color: rgba(255, 255, 255, 0.6);
+    --footer-networks-bgc: rgba(255, 255, 255, 0.1);
+    --footer-input-border-color: rgba(255, 255, 255, 0.3);
+    --footer-input-border-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    --footer-input-color: rgba(255, 255, 255, 0.6);
+    --footer-button-hover-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    --btn-grey-color: #f5f4fa;
+    --portfolio-button-current-color: #ffffff;
+    --portfolio-button-hover-color: #ffffff;
+    --portfolio-button-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+    --portfolio-card-bgc: rgba(33, 150, 243, 0.9);
+    --portfolio-card-hover-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+    --backdrop-bgc: rgba(0, 0, 0, 0.2);
+    --modal-shadow-color: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    --modal-border-color: rgba(33, 33, 33, 0.2);
+    --modal-textarea-color: rgba(117, 117, 117, 0.5);
+    --modal-btn-border-color: rgba(0, 0, 0, 0.1);
+    --border-works-color: #eeeeee;
+}

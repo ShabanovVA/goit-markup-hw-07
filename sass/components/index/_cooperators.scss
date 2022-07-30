@@ -1,0 +1,67 @@
+.cooperators {
+    background-color: var(--cooperators-bgc);
+    &__title {
+            margin-bottom: 50px;
+        }
+    
+        &__list {
+            display: flex;
+            gap: 30px;
+        }
+    
+        &__item {
+            background-color: var(--main-white-color);
+            box-shadow: var(--cooperators-card-shadow);
+            border-radius: 0px 0px 4px 4px;
+        }
+    
+        &__card {
+            padding: 30px 32px;
+            text-align: center;
+        }
+    
+        &__name {
+            color: var(--title-text-color);
+    
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.9;
+            letter-spacing: 0.03em;
+            margin-bottom: 10px;
+        }
+    
+        &__post {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.9;
+            letter-spacing: 0.03em;
+            margin-bottom: 16px;
+        }
+    
+        &__networks {
+            display: flex;
+            gap: 10px;
+        }
+    
+        &__link {
+            display: flex;
+    
+            width: 44px;
+            height: 44px;
+            border-radius: 44px;
+            align-items: center;
+            justify-content: center;
+    
+            background-color: var(--cooperators-icon-bgc);
+            fill: var(--cooperators-icon-fill);
+    
+            transition: fill var(--primary-transition-time) var(--primary-cubic-bezier),
+                background-color var(--primary-transition-time) var(--primary-cubic-bezier);
+        }
+    
+        &__link:hover,
+        &__link:focus {
+            background-color: var(--cooperators-icon-bgc-hover);
+            fill: var(--cooperators-icon-fill-hover);
+        }
+}

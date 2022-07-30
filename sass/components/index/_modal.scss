@@ -1,0 +1,253 @@
+.modal {
+    position: absolute;
+    width: 528px;
+    height: 581px;
+    top: 50%;
+    left: 50%;
+    padding: 40px;
+
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform var(--primary-transition-time) var(--primary-cubic-bezier);
+
+    border-radius: 4px;
+
+    box-shadow: var(--modal-shadow-color);
+    background-color: var(--main-white-color);
+
+        .backdrop.is-hidden & {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+    
+        &__btn-modal {
+            position: absolute;
+            display: flex;
+            width: 30px;
+            height: 30px;
+            right: 8px;
+            top: 8px;
+            border-radius: 30px;
+            align-items: center;
+            cursor: pointer;
+    
+            background-color: var(--main-white-color);
+            border: 1px solid var(--modal-btn-border-color);
+        }
+    
+        &__icon-close {
+            width: 18px;
+            height: 18px;
+            fill: var(--logo-black-color);
+            transition: fill var(--primary-transition-time) var(--primary-cubic-bezier);
+        }
+
+                &__title {
+                    margin-bottom: 12px;
+        
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 1.15;
+                    text-align: center;
+                    letter-spacing: 0.03em;
+        
+                    color: var(--title-text-color);
+                }
+        
+                &__form {
+                    width: 100%;
+                    height: 100%;
+                }
+        
+                &__user-contacts {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+        
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 1.17;
+                    letter-spacing: 0.01em;
+                }
+                
+&__icon {
+    position: absolute;
+    top: 11px;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+
+    transform: translateY(100%);
+    transition: fill var(--primary-transition-time) var(--primary-cubic-bezier);
+}
+
+&__input {
+    height: 40px;
+    padding-left: 42px;
+    margin-top: 4px;
+    outline: none;
+
+    border: 1px solid var(--modal-border-color);
+    border-radius: 4px;
+
+    transition: border-color var(--primary-transition-time) var(--primary-cubic-bezier);
+}
+
+&__textarea {
+    height: 120px;
+    margin-top: 4px;
+    padding: 12px 16px;
+    resize: none;
+    outline: none;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+
+    color: var(--modal-textarea-color);
+    border: 1px solid var(--modal-border-color);
+    border-radius: 4px;
+    transition: border-color var(--primary-transition-time) var(--primary-cubic-bezier);
+}
+&__icon {
+    position: absolute;
+    top: 11px;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+
+    transform: translateY(100%);
+    transition: fill var(--primary-transition-time) var(--primary-cubic-bezier);
+}
+
+&__input {
+    height: 40px;
+    padding-left: 42px;
+    margin-top: 4px;
+    outline: none;
+
+    border: 1px solid var(--modal-border-color);
+    border-radius: 4px;
+
+    transition: border-color var(--primary-transition-time) var(--primary-cubic-bezier);
+}
+
+&__textarea {
+    height: 120px;
+    margin-top: 4px;
+    padding: 12px 16px;
+    resize: none;
+    outline: none;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+
+    color: var(--modal-textarea-color);
+    border: 1px solid var(--modal-border-color);
+    border-radius: 4px;
+    transition: border-color var(--primary-transition-time) var(--primary-cubic-bezier);
+}
+&__agreement {
+    display: inline-block;
+    width: 425px;
+    padding: 0;
+    margin-top: 20px;
+    margin-left: 12px;
+    text-align: center;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+&__agreement-link {
+    color: var(--accent-color);
+}
+
+&__checkbox {
+    display: inline-block;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+&__icon-checkbox {
+    display: inline-block;
+
+    width: 16px;
+    height: 15px;
+    margin-right: 8px;
+
+    border: 1px solid var(--logo-black-color);
+    border-radius: 2px;
+    vertical-align: text-top;
+
+    transition: border-color var(--primary-transition-time) var(--primary-cubic-bezier);
+}
+}
+
+.modal__btn-modal:hover .modal__icon-close,
+.modal__btn-modal:focus .modal__icon-close {
+    fill: var(--accent-color);
+}
+
+.modal__user-contacts:not(:first-child) {
+    margin-top: 10px;
+}
+
+.modal__user-contacts:focus-within>.modal__input,
+.modal__user-contacts:focus-within>.modal__textarea {
+    border-color: var(--accent-color);
+    color: var(--logo-black-color);
+}
+
+.modal__user-contacts:focus-within>.modal__icon {
+    fill: var(--accent-color);
+}
+
+.modal__checkbox:checked+.modal__icon-checkbox {
+    background-color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+
+.modal__checkbox:focus+.modal__icon-checkbox {
+    border-color: var(--accent-color);
+}
+
+.modal__button-submit {
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 55px 10px 56px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    color: var(--main-white-color);
+    background-color: var(--accent-color);
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+    transition: background-color var(--primary-transition-time) var(--primary-cubic-bezier),
+        box-shadow var(--primary-transition-time) var(--primary-cubic-bezier);
+
+    &:hover,
+    &:focus {
+    background-color: var(--btn-hero-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+    }

@@ -1,0 +1,27 @@
+.portfolio__menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    gap: 8px;
+
+    &-button {
+        padding: 6px 22px;
+
+        transition: color var(--primary-transition-time) var(--primary-cubic-bezier),
+            background-color var(--primary-transition-time) var(--primary-cubic-bezier),
+            box-shadow var(--primary-transition-time) var(--primary-cubic-bezier);
+        color: var(--title-text-color);
+        background-color: var(--btn-grey-color);
+    }
+
+    &-button--current {
+        color: var(--portfolio-button-current-color);
+        background-color: var(--accent-color);
+    }
+
+    &-button:hover,
+    &-button:focus {
+        color: var(--portfolio-button-hover-color);
+        background-color: var(--accent-color);
+        box-shadow: var(--portfolio-button-shadow);
+    }}
