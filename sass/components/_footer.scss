@@ -2,31 +2,13 @@
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: var(--bgc-hero-footer-color);
-}
 
-.footer__container {
+&__container {
     display: flex;
     align-items: baseline;
-}
+    }
 
-.footer__link{
-font-family: Raleway, sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    text-decoration: none;
-    margin-bottom: 20px;
-    
-    color: var(--main-white-color);
-    transition: color var(--primary-transition-time) var(--primary-cubic-bezier);
-}
-
-.footer__link:hover,
-.footer__link:focus {
-    color: var(--accent-logo-color);
-}
-
-.footer__address-list {
+&__address-list {
     display: block;
     width: 231px;
 
@@ -38,6 +20,23 @@ font-family: Raleway, sans-serif;
     text-decoration: none;
 
     color: var(--main-white-color);
+}}
+
+.footer__link{
+font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    text-decoration: none;
+    margin-bottom: 20px;
+    
+    color: var(--main-white-color);
+    transition: color var(--primary-transition-time) var(--primary-cubic-bezier);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-logo-color);
+    }
 }
 
 .footer__address-item:not(:last-child) {
@@ -49,37 +48,33 @@ font-family: Raleway, sans-serif;
     color: var(--address-footer-color);
 
     transition: color var(--primary-transition-time) var(--primary-cubic-bezier);
-}
 
-.footer__address-item--grey:hover,
-.footer__address-item--grey:focus,
-.footer__address-item--grey:hover,
-.footer__address-item--grey:focus {
+&:hover,
+&:focus {
     color: var(--accent-color);
+    }
 }
 
 .footer__networks {
     margin-left: 70px;
     height: 80px;
-}
 
-.footer__networks-title,
-.subscribe__label {
-    margin-bottom: 20px;
+&-title {
+        margin-bottom: 20px;
 
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
 
-    color: var(--main-white-color);
-}
+        color: var(--main-white-color);
+    }
 
-.footer__networks-list {
-    display: flex;
-    gap: 10px;
-}
+&-list {
+        display: flex;
+        gap: 10px;
+    }}
 
 .footer__networks-login {
     display: flex;
@@ -94,20 +89,20 @@ font-family: Raleway, sans-serif;
     fill: var(--main-white-color);
 
     transition: background-color var(--primary-transition-time) var(--primary-cubic-bezier);
-}
 
-.footer__networks-login:hover,
-.footer__networks-login:focus {
+&:hover,
+&:focus {
     background-color: var(--accent-color);
-}
-
-/* Футер подпишись */
-
+    }}
+    
 .footer__subscribe {
     margin-left: auto;
-}
-
-.footer__subscribe-form {
+&-icon {
+        width: 24px;
+        height: 24px;
+        margin-left: 10px;
+    }
+&-form {
     display: flex;
     width: 570px;
     height: 50px;
@@ -115,15 +110,17 @@ font-family: Raleway, sans-serif;
     align-items: flex-end;
 }
 
-.footer__subscribe-label {
+&-label {
+    margin-bottom: 20px;
+
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    margin-bottom: 20px;
 
     color: var(--main-white-color);
+}
 }
 
 .footer__subscribe-input {
@@ -146,10 +143,10 @@ font-family: Raleway, sans-serif;
 
     color: var(--footer-input-color);
     background-color: transparent;
-}
 
-.footer__subscribe-input:focus {
-    border-color: var(--accent-color);
+&:focus {
+        border-color: var(--accent-color);
+    }
 }
 
 .footer__subscribe-button {
@@ -171,16 +168,11 @@ font-family: Raleway, sans-serif;
 
     transition: background-color var(--primary-transition-time) var(--primary-cubic-bezier),
         box-shadow var(--primary-transition-time) var(--primary-cubic-bezier);
-}
 
-.footer__subscribe-button:hover,
-.footer__subscribe-button:focus {
+&:hover,
+&:focus {
     background-color: var(--btn-hero-color);
     box-shadow: var(--footer-button-hover-shadow);
-}
+    }
+    }
 
-.footer__subscribe-icon {
-    width: 24px;
-    height: 24px;
-    margin-left: 10px;
-}

@@ -1,23 +1,59 @@
-.portfolio__works-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+.portfolio {
+&__works-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    &__works-item {
+        flex-basis: calc((100% - 2 * 30px) / 3);
+    }
+
+    &__link-card {
+        display: block;
+        text-decoration: none;
+
+        transition: box-shadow var(--primary-transition-time) var(--primary-cubic-bezier);
+    }
+
+    &__card-overlate {
+        position: relative;
+        overflow: hidden;
+    }
+&__link-card:hover,
+&__link-card:focus {
+    box-shadow: var(--portfolio-card-hover-shadow);
 }
 
-.portfolio__works-item {
-    flex-basis: calc((100% - 2 * 30px) / 3);
-}
-
-.portfolio__link-card {
+&__card-description {
     display: block;
-    text-decoration: none;
+    padding: 20px 24px;
 
-    transition: box-shadow var(--primary-transition-time) var(--primary-cubic-bezier);
+    border-width: 0 1px 1px;
+    border-style: solid;
+    border-color: var(--border-works-color);
 }
 
-.portfolio__card-overlate {
-    position: relative;
-    overflow: hidden;
+&__card-title {
+    margin-bottom: 4px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+
+    color: var(--title-text-color);
+}
+
+&__card-name {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.88;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+
+    color: var(--primary-text-color);
+}
 }
 
 .portfolio__card-text {
@@ -46,40 +82,4 @@
     .portfolio__link-card:focus & {
         transform: translateY(0);
     }
-}
-
-.portfolio__link-card:hover,
-.portfolio__link-card:focus {
-    box-shadow: var(--portfolio-card-hover-shadow);
-}
-
-
-.portfolio__card-description {
-    display: block;
-    padding: 20px 24px;
-
-    border-width: 0 1px 1px;
-    border-style: solid;
-    border-color: var(--border-works-color);
-}
-
-.portfolio__card-title {
-    margin-bottom: 4px;
-
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
-
-    color: var(--title-text-color);
-}
-
-.portfolio__card-name {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.88;
-    text-decoration: none;
-    letter-spacing: 0.03em;
-
-    color: var(--primary-text-color);
 }
