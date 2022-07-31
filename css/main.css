@@ -292,6 +292,7 @@ img {
   border-radius: 4px;
   align-items: center;
   justify-content: center;
+  margin-bottom: 30px;
 }
 .advantages__img {
   align-self: center;
@@ -304,7 +305,6 @@ img {
   text-transform: uppercase;
   letter-spacing: 0.03em;
   margin-bottom: 10px;
-  margin-top: 30px;
 }
 .advantages__description {
   font-weight: 400;
@@ -755,6 +755,7 @@ img {
 }
 
 .footer__link {
+  display: block;
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
